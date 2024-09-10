@@ -11,6 +11,9 @@ dependencies:
   '@expo/vector-icons':
     specifier: ^14.0.2
     version: 14.0.2
+  '@react-native-community/netinfo':
+    specifier: 11.3.1
+    version: 11.3.1(react-native@0.74.5)
   '@react-navigation/native':
     specifier: ^6.0.2
     version: 6.1.18(react-native@0.74.5)(react@18.2.0)
@@ -2680,6 +2683,14 @@ packages:
       - encoding
       - supports-color
       - utf-8-validate
+    dev: false
+
+  /@react-native-community/netinfo@11.3.1(react-native@0.74.5):
+    resolution: {integrity: sha512-UBnJxyV0b7i9Moa97Av+HKho1ByzX0DtbJXzUQS5E3xhQs6P2D/Os0iw3ouy7joY1TVd6uIhplPbr7l1SJNaNQ==}
+    peerDependencies:
+      react-native: '>=0.59'
+    dependencies:
+      react-native: 0.74.5(@babel/core@7.25.2)(@babel/preset-env@7.25.4)(@types/react@18.2.79)(react@18.2.0)
     dev: false
 
   /@react-native/assets-registry@0.74.87:
