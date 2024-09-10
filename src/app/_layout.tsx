@@ -25,6 +25,14 @@ function onAppStateChange(status: AppStateStatus) {
   }
 }
 
+const App = () => {
+  return (
+    <Stack>
+      <Stack.Screen name="index" />
+    </Stack>
+  );
+};
+
 export default function RootLayout() {
   useReactQueryDevTools(queryClient);
 
@@ -36,9 +44,7 @@ export default function RootLayout() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Stack>
-        <Stack.Screen name="index" />
-      </Stack>
+      <App />
     </QueryClientProvider>
   );
 }
