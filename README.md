@@ -28,6 +28,12 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
       pnpm android
     ```
 
+## Used tools
+
+1. [Expo](https://expo.dev) is used for building the app. It provides lof of functionality and a router out of the box.
+2. [UniStyles](https://reactnativeunistyles.vercel.app/) is used for styling the components. We can completely drop it if needed
+3. [TanStack Query](https://tanstack.com/query/latest) is used for fetching data from the server. We can completely drop it if needed
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
