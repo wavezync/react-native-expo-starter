@@ -10,11 +10,23 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    pnpm install
    ```
 
-2. Start the app
+2. Run prebuild to generate native code. This is necessary for compiling the app with native dependencies.
 
    ```bash
-    pnpm start
+   pnpm prebuild
    ```
+
+3. Start the app
+
+   ```bash
+    pnpm ios 
+   ```
+
+    or
+  
+    ```bash
+      pnpm android
+    ```
 
 In the output, you'll find options to open the app in a
 

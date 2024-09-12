@@ -11,7 +11,8 @@
     "test": "jest --watchAll",
     "lint": "expo lint",
     "lint:fix": "eslint --fix .",
-    "expo": "expo"
+    "expo": "expo",
+    "prebuild:clean": "expo prebuild --clean"
   },
   "jest": {
     "preset": "jest-expo"

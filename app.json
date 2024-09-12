@@ -14,14 +14,14 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.wavezync.rnstarter"
+      "bundleIdentifier": "com.wavezync.myapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.wavezync.rnstarter"
+      "package": "com.wavezync.myapp"
     },
     "web": {
       "bundler": "metro",
