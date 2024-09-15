@@ -64,7 +64,7 @@ jobs:
       - name: Expo Prebuild
         run: pnpm prebuild:clean
       - name: 🚀 Build app
-        run: eas build --local --platform android --non-interactive
+        run: eas build --local --platform android --profile preview --non-interactive
 
   build-ios:
     name: Build iOS
@@ -94,4 +94,4 @@ jobs:
       - name: Expo Prebuild
         run: pnpm prebuild:clean
       - name: 🚀 Build app
-        run: eas build --local --platform ios --non-interactive
+        run: eas build --local --platform ios --profile preview --non-interactive
