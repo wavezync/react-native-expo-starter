@@ -76,7 +76,7 @@ jobs:
       - name: 🚀 Build app
         run: eas build --local --platform android --profile preview --non-interactive --output ./app-build
       - name: Push update to Preview
-        run: eas update --auto android --profile preview --release-channel preview --non-interactive
+        run: eas update --auto --non-interactive
 
   # build-ios:
   #   name: Build iOS
