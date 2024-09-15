@@ -8,6 +8,9 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   # Lint job
   lint:
@@ -55,6 +58,7 @@ jobs:
         with:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
+          packager: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Expo Prebuild
@@ -84,6 +88,7 @@ jobs:
         with:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
+          packager: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Expo Prebuild
