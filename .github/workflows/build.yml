@@ -62,10 +62,21 @@ jobs:
           packager: pnpm
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+          cache-dependency-path: | # optional
+            sub-project/*.gradle*
+            sub-project/**/gradle-wrapper.properties
       - name: Expo Prebuild
         run: pnpm prebuild:clean
       - name: 🚀 Build app
-        run: eas build --local --platform android --profile preview --non-interactive
+        run: eas build --local --platform android --profile preview --non-interactive --output ./app-build
+      - name: Push update to Preview
+        run: eas update --auto android --profile preview --release-channel preview --non-interactive
 
   # build-ios:
   #   name: Build iOS
