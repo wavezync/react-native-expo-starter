@@ -1,3 +1,4 @@
+import 'expo-dev-client';
 import {
   QueryClient,
   QueryClientProvider,
@@ -30,7 +31,18 @@ function onAppStateChange(status: AppStateStatus) {
 const App = () => {
   return (
     <Stack>
-      <Stack.Screen name="index" />
+      <Stack.Screen
+        name="index"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="(tabs)"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 };

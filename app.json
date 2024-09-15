@@ -39,6 +39,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "85ac943b-4a3f-43c7-b366-e1ed81ecfc15"
+      }
+    },
+    "owner": "wavezync"
   }
 }

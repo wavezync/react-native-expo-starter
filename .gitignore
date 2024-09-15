@@ -22,3 +22,9 @@ expo-env.d.ts
 # expo prebuild
 android
 ios
+
+.env
+
+*.apk
+*.aab
+*.ipa
