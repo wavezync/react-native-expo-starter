@@ -50,9 +50,43 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'
+      - name: 🏗 Setup EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Expo Prebuild
         run: pnpm prebuild:clean
-      - name: Build Android
-        run: pnpm build:android
+      - name: 🚀 Build app
+        run: eas build --local --platform android --non-interactive
+
+  build-ios:
+    name: Build iOS
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 8
+          run_install: false
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      - name: 🏗 Setup EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Expo Prebuild
+        run: pnpm prebuild:clean
+      - name: 🚀 Build app
+        run: eas build --local --platform ios --non-interactive
