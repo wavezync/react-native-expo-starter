@@ -53,6 +53,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Expo Prebuild
-        run: prebuild:clean
+        run: pnpm prebuild:clean
       - name: Build Android
         run: pnpm build:android
