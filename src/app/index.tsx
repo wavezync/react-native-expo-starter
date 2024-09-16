@@ -39,7 +39,7 @@ const Page = () => {
           color="secondary"
           text="Alert 2"
           outlined
-          onPress={() => alert('Hi mom')}
+          onPress={() => alert('Hi mom 2')}
         />
       </View>
     </View>
